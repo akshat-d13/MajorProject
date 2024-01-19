@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBuddy</title>
+    <link rel="stylesheet" href="style.css" class="style">
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="app">
+    <aside>
+        <nav>
+            <div class="nav-top">
+                <button id="add-chat">
+                    <iconify-icon icon="bi:plus-lg"></iconify-icon> New Chat
+                </button>
+                <ul class="chats">
+                    <li>
+                        <div>
+                            <iconify-icon icon="bi:chat-left-text" class="icon"></iconify-icon>
+                            <span class="chat-title" contenteditable>New Chat</span>
+                        </div>
+                        <div>
+                            <iconify-icon icon="bi:trash3" class="icon" onclick="removeChat(this)"></iconify-icon>
+                            <iconify-icon icon="bi:pencil-square" class="icon" onclick="updateChatTitle(this)"></iconify-icon>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <iconify-icon icon="bi:chat-left-text" class="icon"></iconify-icon>
+                            <span class="chat-title" contenteditable>New Chat</span>
+                        </div>
+                        <div>
+                            <iconify-icon icon="bi:trash3" class="icon" onclick="removeChat(this)"></iconify-icon>
+                            <iconify-icon icon="bi:pencil-square" class="icon" onclick="updateChatTitle(this)"></iconify-icon>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li id = "delete">
+                    <iconify-icon icon="bi:trash3" class="icon"></iconify-icon> Clear conversation
+                </li>
+                <li>
+                    <iconify-icon icon="bi:gear" class="icon"></iconify-icon>Settings
+                </li>
+                <li id = "mode">
+                    <iconify-icon icon="bi:brightness-high" class="icon"></iconify-icon>Light Mode
+                </li>
+                <li>
+                    <iconify-icon icon="bi:globe2" class="icon"></iconify-icon>English
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="heading">
+            <h3>CodeBuddy</h3></div>
+        <div class="hints">
+            <img src="logo.jfif" alt="" class="logo"> 
+            <p>Enter your message to start a chat. This could be a code you want to refactor or change the language or improve the quality of the code.</p> 
+        </div>
+        <div class="qna">
+            <div class="result">
+                <!-- <div class="question">
+                    <iconify-icon icon="bi:person-circle" class="icon blue"></iconify-icon>
+                    <h3>Convert the code to Java</h3>
+                </div>
+
+
+                <div class="answer">
+                    <iconify-icon icon="bi:robot" class="icon green"></iconify-icon>
+                    <p>Following is the code for Java.</p>
+                </div> -->
+            </div>
+        </div>
+        <div class="request">
+            <iconify-icon icon="bi:person-fill-gear" class="icon"></iconify-icon>
+            <input type="text" placeholder="Provide a prompt ..." autofocus>
+            <button id="send">Send</button>
+        </div>
+    </main>
+</div>
+</body>
+</html>
